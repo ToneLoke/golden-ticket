@@ -1,0 +1,87 @@
+.container {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  opacity: 1;
+}
+.splash {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2000;
+  opacity: 1;
+  background-color: #000;
+}
+.logo {
+  width: 15rem;
+  height: 3rem;
+  margin-bottom: 4rem;
+}
+.slider {
+  position: absolute;
+  width: 24rem;
+  height: 6px;
+  overflow-x: hidden;
+  margin-top: 2rem;
+}
+.line {
+  position: absolute;
+  opacity: 0.4;
+  background: #fff;
+  width: 24rem;
+  height: 6px;
+}
+.subline {
+  position: absolute;
+  background: #ffeb3b;
+  width: 24rem;
+  height: 6px;
+  &.inc {
+    animation: progress-increase 2s infinite;
+  }
+  &.dec {
+    animation: progress-decrease 2s 0.5s infinite;
+  }
+}
+.tagline {
+  position: fixed;
+  bottom: 6%;
+  color: #fff !important;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+@keyframes progress-increase {
+  from {
+    left: -5%;
+    width: 5%;
+  }
+  to {
+    left: 130%;
+    width: 100%;
+  }
+}
+@keyframes progress-decrease {
+  from {
+    left: -80%;
+    width: 80%;
+  }
+  to {
+    left: 110%;
+    width: 10%;
+  }
+}

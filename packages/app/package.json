@@ -1,0 +1,33 @@
+{
+  "name": "@webtv/app",
+  "version": "0.0.0",
+  "description": "react static app",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": "toneloke",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:declaration": "tsc --project tsconfig.build.json",
+    "build": "yarn build:es && yarn build:umd",
+    "build:es": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments",
+    "build:umd": "yarn bundle:prod",
+    "bundle:prod": "webpack --mode production",
+    "bundle:dev": "webpack --mode development --devtool source-map",
+    "start": "webpack-dev-server --mode development --progress --open"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "react-app-polyfill": "^1.0.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@webtv/ui": "^0.0.1",
+    "@webtv/compiler": "^0.0.1"
+  }
+}

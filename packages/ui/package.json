@@ -1,0 +1,23 @@
+{
+  "name": "@webtv/ui",
+  "version": "0.0.1",
+  "description": "webtv-ui for react components",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "@material-ui/styles": "^4.4.1",
+    "classnames": "^2.2.6",
+    "react": "^16.9.0"
+  },
+  "scripts": {
+    "build:declaration": "tsc --project tsconfig.build.json",
+    "build": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "paths": {
+      "@webtv/*": ["node_modules/@webtv/*/src"]
+    }
+  },
+  "exclude": ["**/*.story.*", "**/*.test.*", "dist"],
+  "include": []
+}

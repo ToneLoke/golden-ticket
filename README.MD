@@ -1,4 +1,4 @@
-# A Monorepo style guid for all
+# A Monorepo style guide for all
 
 - [Monorepo](#monorepo)
   - [The goal](#the-goal)
